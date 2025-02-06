@@ -1,21 +1,21 @@
 {
   "name": "gcit_appstore",
   "version": "1.0.0",
-  "description": "to ensure that the medicines prescribed to paitents are suitable and advise patients about medicines, including how to take them, what reactions may occu, and answer patients' questions",
+  "description": "to ensure that the medicines prescribed to patients are suitable and advise patients about medicines, including how to take them, what reactions may occur, and answer patients' questions",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon  server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/12200025.gcit/agile.git).git"
+    "url": "https://github.com/kakaDorji/GCIT-HUB2024.git"
   },
   "author": "12200025",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/12200025.gcit/agile.git)/issues"
+    "url": "https://github.com/kakaDorji/GCIT-HUB2024/issues"
   },
-  "homepage": "https://gitlab.com/12200025.gcit/agile.git)#readme",
+  "homepage": "https://github.com/kakaDorji/GCIT-HUB2024#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
