@@ -1,5 +1,6 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
+const {connectMongoDB}=require("./server")
 const path = require('path');
 const cors = require('cors');
 const dotenv = require('dotenv');
@@ -12,10 +13,7 @@ dotenv.config({ path: './config.env' });
 const app = express();
 
 // ✅ CORS Middleware - Allows frontend access (both local and deployed)
-app.use(cors({
-  origin: ['http://localhost:4001', 'https://gcit-hub-13.onrender.com'], // ✅ Add your local and deployed frontend URLs
-  credentials: true // ✅ Allows sending cookies with requests
-}));
+app.use(cors());
 
 app.use(cookieParser());
 app.use(express.json());
@@ -38,4 +36,10 @@ app.use((err, req, res, next) => {
   res.status(err.statusCode || 500).json({ error: err.message });
 });
 
-module.exports = app; // ✅ Export app only (server will be in `server.js`)
+const port = process.env.PORT || 4001;
+app.listen(port, () => {
+  console.log(`App running on port ${port}..`);
+});
+connectMongoDB();
+
+
